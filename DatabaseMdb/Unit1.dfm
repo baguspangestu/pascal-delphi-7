@@ -1,0 +1,260 @@
+object Form1: TForm1
+  Left = 192
+  Top = 125
+  BorderStyle = bsSingle
+  Caption = 'Data Mahasiswa'
+  ClientHeight = 305
+  ClientWidth = 937
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 48
+    Width = 38
+    Height = 20
+    Caption = 'NPM'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 80
+    Width = 47
+    Height = 20
+    Caption = 'Nama'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 112
+    Width = 65
+    Height = 20
+    Caption = 'Jurusan'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 144
+    Width = 78
+    Height = 20
+    Caption = 'Angkatan'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 176
+    Width = 57
+    Height = 20
+    Caption = 'Alamat'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 312
+    Top = 8
+    Width = 190
+    Height = 29
+    Caption = 'Data Mahasiswa'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelNotif: TLabel
+    Left = 112
+    Top = 24
+    Width = 3
+    Height = 13
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 112
+    Top = 48
+    Width = 185
+    Height = 21
+    TabOrder = 0
+    OnChange = Edit1Change
+  end
+  object Edit2: TEdit
+    Left = 112
+    Top = 80
+    Width = 185
+    Height = 21
+    TabOrder = 1
+    OnChange = Edit2Change
+  end
+  object Edit3: TEdit
+    Left = 112
+    Top = 112
+    Width = 185
+    Height = 21
+    TabOrder = 2
+    OnChange = Edit3Change
+  end
+  object Memo1: TMemo
+    Left = 112
+    Top = 176
+    Width = 185
+    Height = 89
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 3
+    OnChange = Memo1Change
+  end
+  object DBGrid1: TDBGrid
+    Left = 312
+    Top = 40
+    Width = 617
+    Height = 249
+    DataSource = DataSource1
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object ButtonSimpan: TButton
+    Left = 16
+    Top = 272
+    Width = 81
+    Height = 25
+    Caption = 'SIMPAN'
+    Default = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = ButtonSimpanClick
+  end
+  object ButtonUbah: TButton
+    Left = 120
+    Top = 272
+    Width = 75
+    Height = 25
+    Caption = 'UBAH'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    OnClick = ButtonUbahClick
+  end
+  object ButtonHapus: TButton
+    Left = 216
+    Top = 272
+    Width = 75
+    Height = 25
+    Caption = 'HAPUS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = ButtonHapusClick
+  end
+  object ComboBox1: TComboBox
+    Left = 112
+    Top = 144
+    Width = 185
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 8
+    Text = 'Pilih'
+    OnChange = ComboBox1Change
+    Items.Strings = (
+      '2020'
+      '2019'
+      '2018'
+      '2017'
+      '2016'
+      '2015'
+      '2014'
+      '2013'
+      '2012'
+      '2011')
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 72
+    Top = 8
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Project\Git\pasc' +
+      'al-delphi-7\DatabaseMdb\Mahasiswa.mdb;Mode=Share Deny None;Persi' +
+      'st Security Info=False;Jet OLEDB:System database="";Jet OLEDB:Re' +
+      'gistry Path="";Jet OLEDB:Database Password="";Jet OLEDB:Engine T' +
+      'ype=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial' +
+      ' Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New D' +
+      'atabase Password="";Jet OLEDB:Create System Database=False;Jet O' +
+      'LEDB:Encrypt Database=False;Jet OLEDB:Don'#39't Copy Locale on Compa' +
+      'ct=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLED' +
+      'B:SFP=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 8
+    Top = 8
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Mhs'
+    Left = 40
+    Top = 8
+  end
+  object ADOQuery1: TADOQuery
+    Connection = ADOConnection1
+    Parameters = <>
+    Left = 112
+    Top = 8
+  end
+end
