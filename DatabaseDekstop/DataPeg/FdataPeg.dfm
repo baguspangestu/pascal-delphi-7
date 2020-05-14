@@ -1,0 +1,128 @@
+object Form1: TForm1
+  Left = 192
+  Top = 124
+  Width = 561
+  Height = 263
+  Caption = 'Program Menampilkan Data Pegawai'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 56
+    Top = 56
+    Width = 64
+    Height = 13
+    Caption = 'No Pegawai :'
+  end
+  object Label2: TLabel
+    Left = 56
+    Top = 88
+    Width = 34
+    Height = 13
+    Caption = 'Nama :'
+  end
+  object Label3: TLabel
+    Left = 56
+    Top = 120
+    Width = 71
+    Height = 13
+    Caption = 'Tanggal Lahir :'
+  end
+  object Label4: TLabel
+    Left = 56
+    Top = 152
+    Width = 70
+    Height = 13
+    Caption = 'Jenis Kelamin :'
+  end
+  object DBEditNoPeg: TDBEdit
+    Left = 144
+    Top = 56
+    Width = 121
+    Height = 21
+    DataField = 'NoPeg'
+    DataSource = DataSourcePribadi
+    TabOrder = 0
+  end
+  object DBEditNamaPeg: TDBEdit
+    Left = 144
+    Top = 88
+    Width = 241
+    Height = 21
+    DataField = 'NamaPeg'
+    DataSource = DataSourcePribadi
+    TabOrder = 1
+  end
+  object DBEditTglLahir: TDBEdit
+    Left = 144
+    Top = 120
+    Width = 121
+    Height = 21
+    DataField = 'TglLahir'
+    DataSource = DataSourcePribadi
+    TabOrder = 2
+  end
+  object DBEditKelamin: TDBEdit
+    Left = 144
+    Top = 152
+    Width = 121
+    Height = 21
+    DataField = 'Kelamin'
+    DataSource = DataSourcePribadi
+    TabOrder = 3
+  end
+  object ButtonPertama: TButton
+    Left = 440
+    Top = 24
+    Width = 83
+    Height = 33
+    Caption = '&Pertama'
+    TabOrder = 4
+    OnClick = ButtonPertamaClick
+  end
+  object ButtonTerakhir: TButton
+    Left = 440
+    Top = 72
+    Width = 83
+    Height = 33
+    Caption = '&Terakhir'
+    TabOrder = 5
+    OnClick = ButtonTerakhirClick
+  end
+  object ButtonBerikutnya: TButton
+    Left = 440
+    Top = 120
+    Width = 83
+    Height = 33
+    Caption = '&Berikutnya'
+    TabOrder = 6
+    OnClick = ButtonBerikutnyaClick
+  end
+  object ButtonSebelumnya: TButton
+    Left = 440
+    Top = 168
+    Width = 83
+    Height = 33
+    Caption = '&Sebelumnya'
+    TabOrder = 7
+    OnClick = ButtonSebelumnyaClick
+  end
+  object TablePribadi: TTable
+    Active = True
+    DatabaseName = 'Latihan'
+    TableName = 'Pribadi.db'
+    Left = 56
+    Top = 8
+  end
+  object DataSourcePribadi: TDataSource
+    DataSet = TablePribadi
+    Left = 96
+    Top = 8
+  end
+end
