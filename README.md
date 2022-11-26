@@ -1,4 +1,5 @@
 # Project Pascal Delphi 7
+
 - ### ArrayNamaHari
   ![ArrayNamaHari](/ArrayNamaHari.png)
 - ### ArrayRandNum
@@ -10,7 +11,6 @@
 - ### MenghitungGaji
   ![MenghitungGaji](/MenghitungGaji.png)
 
-### Contact:
-- Facebook: [Bagus Pangestu](https://fb.com/baguspangestucom)
-- Email: baguspangestu@yandex.com
-- Website: http://baguspangestu.com
+---
+
+© 2020 Bagus Pangestu - <baguspangestu@yandex.com>
