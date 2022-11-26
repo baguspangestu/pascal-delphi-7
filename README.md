@@ -1,5 +1,7 @@
 # Project Pascal Delphi 7
 
+Sebagai tugas kuliah pada saat itu.
+
 - ### ArrayNamaHari
   ![ArrayNamaHari](/ArrayNamaHari.png)
 - ### ArrayRandNum
